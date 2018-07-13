@@ -25,19 +25,19 @@ public interface IEntityDefinition {
     String getName();
     
     @ZenMethod
-    void addDrop(IItemStack stack, @Optional int min, @Optional int max, @Optional float chance);
+    void addDrop(IItemStack stack, @Optional(valueInt = 1) int min, @Optional(valueInt = 1) int max, @Optional float chance);
     
     @ZenMethod
-    void addDrop(WeightedItemStack stack, @Optional int min, @Optional int max);
+    void addDrop(WeightedItemStack stack, @Optional(valueInt = 1) int min, @Optional(valueInt = 1) int max);
     
     @ZenMethod
     void addDropFunction(IEntityDropFunction function);
     
     @ZenMethod
-    void addPlayerOnlyDrop(IItemStack stack, @Optional int min, @Optional int max, @Optional float chance);
+    void addPlayerOnlyDrop(IItemStack stack, @Optional(valueInt = 1) int min, @Optional(valueInt = 1) int max, @Optional float chance);
     
     @ZenMethod
-    void addPlayerOnlyDrop(WeightedItemStack stack, @Optional int min, @Optional int max);
+    void addPlayerOnlyDrop(WeightedItemStack stack, @Optional(valueInt = 1) int min, @Optional(valueInt = 1) int max);
     
     @ZenMethod
     void removeDrop(IItemStack stack);
